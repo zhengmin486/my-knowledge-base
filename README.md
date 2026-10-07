@@ -59,10 +59,10 @@ OPL / CPLEX 参考手册，以及模型部署与数据源接入等。
 ├── .gitignore            # 忽略本地状态、密钥与向量库
 ├── watsonx_docs.txt      # 知识源数据集（watsonxDocsQA，1,144 篇文档）
 └── screenshots/          # 运行效果截图
-    └── qa_result.png     # RAG 问答实测截图（待补充）
+    └── qa_result.png     # RAG 问答实测效果图
 ```
 
-> `screenshots/` 需要至少放入一个文件后才会被 Git 跟踪，因此空目录不会出现在 GitHub 上。
+> `screenshots/qa_result.png` 为实测问答效果图，已随仓库一并托管。
 
 ## 本地运行步骤
 
@@ -118,10 +118,10 @@ OPL / CPLEX 参考手册，以及模型部署与数据源接入等。
 
 ## 运行效果
 
-> 下图为导入 watsonxDocsQA 数据集后进行 RAG 问答的实测界面。
+下图为导入 watsonxDocsQA 数据集后进行 RAG 问答的实测界面：提问「根据知识库，IBM 构建了哪些基础模型？」，
+助手基于检索到的文档片段给出结论与模型对比表，并标注来源分块（`watsonx_docs.txt` chunk 7895 / 7898 / 7905、chunk 7920）。
 
-<!-- 把截图放到 screenshots/qa_result.png 后，取消下面一行的注释即可显示 -->
-<!-- ![RAG 问答效果](screenshots/qa_result.png) -->
+![RAG 问答实测效果](screenshots/qa_result.png)
 
 ## 安全与隐私
 
@@ -137,7 +137,7 @@ OPL / CPLEX 参考手册，以及模型部署与数据源接入等。
 
 ## 后续计划
 
-- 补充 RAG 问答实测截图。
+- 持续补充实测问答截图，覆盖更多典型问题。
 - 扩充中文技术文档，构建中英混合知识库。
 - 优化切分粒度与召回条数，提升长文档问答准确率。
 - 沉淀典型问答样例，形成可回归的评测集。
